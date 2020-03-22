@@ -2,8 +2,8 @@ import sys, os
 sys.path.append(os.pardir)
 import numpy as np 
 import matplotlib.pyplot as plt
-from dataset.mnist import load_mnist
-from network.two_layer_net import TwoLayerNet
+from OldDeeplearning.dataset.mnist import load_mnist
+from OldDeeplearning.network.two_layer_net import TwoLayerNet
 
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True) #mnistのデータを正規化on,一次元化on,one-hot表現off
 
