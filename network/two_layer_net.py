@@ -2,7 +2,7 @@ import sys, os
 sys.path.append(os.pardir)
 import numpy as np  
 from common.function import sigmoid, softmax, cross_entropy_error
-from common.gradient import numerical_gradient
+# from common.gradient import numerical_gradient
 from common.layers import Relu, Affine, SoftmaxWithLoss
 from collections import OrderedDict
 
