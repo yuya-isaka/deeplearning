@@ -3,5 +3,5 @@ This is a self-study repository for "the theory and implementation of Deep Learn
 
 In addition, a fault-tolerant design will be added.
 
-reference：https://github.com/oreilly-japan/deep-learning-from-scratch
+reference:https://github.com/oreilly-japan/deep-learning-from-scratch
 
