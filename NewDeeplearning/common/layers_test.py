@@ -1,14 +1,15 @@
 # coding: utf-8
-import math
+
+import sys, os
+sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
-from common.functions import *
-from common.util import im2col, col2im
+from common.functions import sigmoid, softmax, cross_entropy_error
 import numba
 from copy import deepcopy
-import bisect
-import numpy 
-
-#np.set_printoptions(np.inf)
+# import math
+# from common.util import im2col, col2im
+# import bisect
+# np.set_printoptions(np.inf)
 
 class Relu:
     def __init__(self):

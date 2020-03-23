@@ -1,28 +1,30 @@
+# coding: utf-8
 
 import sys, os
 sys.path.append(os.pardir)
 
 import numpy as np
-import gc
-import math
-import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
 from program.layer_net import MNN
 import random
 from common.optimizer import SGD, Adam, AdaGrad
-#import seaborn as sns
-import sklearn.linear_model as lm
-import scipy.fftpack as sp
-import scipy.io
-from scipy import stats
-#import pandas as pd
 from numba import jit
-# TensorFlow and tf.keras
-#import tensorflow as tf
 from tensorflow import keras
 from sklearn import datasets
 import time
 import copy
+# import gc
+# import math
+# import matplotlib.pyplot as plt
+# import sklearn.linear_model as lm
+# import seaborn as sns
+# import scipy.fftpack as sp
+# import scipy.io
+# from scipy import stats
+# jimport pandas as pd
+# TensorFlow and tf.keras
+# import tensorflow as tf
+
 
 # ---------------各種パラメータの設定．基本的にはここをいじるだけで実験可能-----------------------
 

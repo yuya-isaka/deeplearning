@@ -1,4 +1,5 @@
 # coding: utf-8
+
 try:
     import urllib.request
 except ImportError:

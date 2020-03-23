@@ -1,9 +1,9 @@
 # coding: utf-8
-# aaaa
+
 import sys, os
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
 import numpy as np
-from common.layers_test import *
+from common.layers_test import Affine_MEM, Sigmoid, Relu, SoftmaxWithLoss, BatchNormalization
 from collections import OrderedDict
 import numba
 from copy import deepcopy
@@ -189,8 +189,8 @@ class MNN:
     def accuracy(self, x, t):
         y = self.predict(x, train_flg=False, acc=True)
         z = deepcopy(y)
-        y = numpy.argmax(y, axis=1)
-        if t.ndim != 1 : t = numpy.argmax(t, axis=1)
+        y = np.argmax(y, axis=1)
+        if t.ndim != 1 : t = np.argmax(t, axis=1)
 
         accuracy = np.sum(np.asarray(y) == np.asarray(t)) / np.float(x.shape[0])
 

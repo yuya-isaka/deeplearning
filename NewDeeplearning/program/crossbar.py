@@ -1,4 +1,3 @@
-
 # coding: utf-8
 
 import numpy as np
@@ -2137,3 +2136,4 @@ class Crossbar(object):
             row_checksum_fnum = 0
             return x1_row, x2_row, y1_row, y2_row, d1_row, d2_row, row_checksum_fnum, possible, fault_free
 
+k
