@@ -2,8 +2,8 @@ import sys, os
 sys.path.append(os.pardir)
 import numpy as np 
 import matplotlib.pyplot as plt
-from OldDeeplearning.dataset.mnist import load_mnist
-from OldDeeplearning.network.two_layer_net import TwoLayerNet
+from dataset.mnist import load_mnist
+from network.two_layer_net import TwoLayerNet
 
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True) #mnistのデータを正規化on,一次元化on,one-hot表現off
 
@@ -50,11 +50,21 @@ for i in range(iters_num):
         print("train acc, test acc | " + str(train_acc) + ", " + str(test_acc))
 
 
+# x = np.arange(len(train_acc_list))
+# plt.plot(x, train_acc_list, label='訓練 認識精度')
+# plt.plot(x, test_acc_list, label='テスト 認識精度', linestyle='--')
+# plt.xlabel("エポック")
+# plt.ylabel("精度")
+# plt.ylim(0, 1.0) # yの出力範囲指定
+# plt.legend(loc='lower right') # ラベルの表示位置を決められる
+# plt.show()
+
+markers = {'train': 'o', 'test': 's'}
 x = np.arange(len(train_acc_list))
-plt.plot(x, train_acc_list, label='訓練 認識精度')
-plt.plot(x, test_acc_list, label='テスト 認識精度', linestyle='--')
-plt.xlabel("エポック")
-plt.ylabel("精度")
-plt.ylim(0, 1.0) # yの出力範囲指定
-plt.legend(loc='lower right') # ラベルの表示位置を決められる
+plt.plot(x, train_acc_list, label='train acc')
+plt.plot(x, test_acc_list, label='test acc', linestyle='--')
+plt.xlabel("epochs")
+plt.ylabel("accuracy")
+plt.ylim(0, 1.0)
+plt.legend(loc='lower right')
 plt.show()

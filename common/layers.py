@@ -1,7 +1,7 @@
 import sys,os
 sys.path.append(os.pardir)
 import numpy as np  
-from OldDeeplearning.common.function import sigmoid, softmax, cross_entropy_error
+from common.function import sigmoid, softmax, cross_entropy_error
 
 
 class Relu:
